@@ -33,15 +33,18 @@ pre {
   word-wrap: break-word; }
 
 body {
-  background: url(../img/river-topleft.png) left top no-repeat, url(../img/river-bottomright.png) right bottom no-repeat, url(../img/arrow.png) 5% calc(100% - 50px) no-repeat;
+  background: url(../img/river-topleft.svg) left top no-repeat, url(../img/river-bottomright.svg) right bottom no-repeat, url(../img/arrow.svg) 5% calc(100% - 50px) no-repeat;
+  background-size: 269px 178px, 263px 168px, 230px 100px;
   padding: 20px; }
   @media screen and (max-width: 40em) {
     body {
-      background: url(../img/river-topleft.png) left -75px no-repeat, url(../img/river-bottomright.png) right bottom no-repeat, url(../img/arrow.png) 5% calc(100% - 50px) no-repeat; } }
+      background: url(../img/river-topleft.svg) left -75px no-repeat, url(../img/river-bottomright.svg) right bottom no-repeat, url(../img/arrow.svg) 5% calc(100% - 50px) no-repeat; } }
 
 a {
   color: #1b89ca;
-  text-decoration: none; }
+  transition: 0.25s all; }
+  a:hover {
+    color: #00ccff; }
 
 .content {
   max-width: 800px;
@@ -50,11 +53,12 @@ a {
     margin-bottom: 140px; }
     .content #header .logo a {
       text-indent: -9999px;
-      background: url(../img/logo.png);
+      background: url(../img/logo.svg);
       display: block;
       width: 305px;
       height: 63px;
-      margin: 40px auto 20px; }
+      margin: 40px auto 20px;
+      background-size: 305px 63px; }
     .content #header nav ul li {
       display: inline-block;
       margin: 0 auto;
@@ -63,6 +67,8 @@ a {
       font-size: 16px;
       font-weight: bold;
       letter-spacing: 1px; }
+      .content #header nav ul li a {
+        text-decoration: none; }
       @media screen and (max-width: 40em) {
         .content #header nav ul li {
           display: block; } }
