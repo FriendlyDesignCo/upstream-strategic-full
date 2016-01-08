@@ -1,7 +1,6 @@
 $usc-grey: #636f73;
 $usc-blue: #1b89ca;
 $screen-sm: 40em;
-$screen-md: 64em;
 
 /* apply a natural box layout model to all elements */
 html, *, *:before, *:after  {
@@ -47,11 +46,15 @@ pre {
 }
 
 body{
+	transition: 0.25s all;
 	background: url(../img/river-topleft.svg) left top no-repeat, url(../img/river-bottomright.svg) right bottom no-repeat, url(../img/arrow.svg) 5% calc(100% - 50px) no-repeat;
 	background-size: 269px 178px, 263px 168px, 230px 100px;
 	padding: 20px;
 	// left, right, arrow
-
+	@media screen and (min-width: 80em){
+	background: url(../img/river-topleft.svg) left top no-repeat, url(../img/river-bottomright.svg) right bottom no-repeat, url(../img/arrow.svg) 5% calc(100% - 100px) no-repeat;
+	background-size: 650px, 650px , 350px;
+	}
 	@media screen and (max-width: 40em){
 	background: url(../img/river-topleft.svg) left -75px no-repeat, url(../img/river-bottomright.svg) right bottom no-repeat, url(../img/arrow.svg) 5% calc(100% - 50px) no-repeat;	
 	background-size: 269px 178px, 263px 168px, 230px 100px;
@@ -145,6 +148,13 @@ a{
 			font-size: 20px;
 		}
 	}
+	ul{
+		line-height: 1.5;
+	}
+	li{
+		margin-bottom: 15px;
+		margin-left: 25px;
+	}
 	//END CONTENT MIDDLE
 
 	#footer{
@@ -154,7 +164,13 @@ a{
 			padding: 0;
 			line-height: 1.5;
 		}
+		li{
+			margin-left: 0;
+		}
 		padding: 90px 0 180px;	
+		@media screen and (min-width: 80em){
+		padding-bottom: 240px;
+		}
 		@media screen and (max-width: 40em){
 			padding: 60px 0 120px;
 		}	
