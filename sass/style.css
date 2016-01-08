@@ -15,7 +15,8 @@ html, body {
   padding: 0;
   color: #636f73;
   font-size: 20px;
-  font-weight: 300; }
+  font-weight: 300;
+  font-family: Proxima Nova, "proxima-nova",sans-serif; }
 
 img {
   max-width: 100%;
