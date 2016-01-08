@@ -1,22 +1,24 @@
 /* apply a natural box layout model to all elements */
-html {
+html, *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-*, *:before, *:after {
-  -moz-box-sizing: inherit;
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit; }
-
 /* reset some common browser styles */
+h1, h2, h3, h4, h5, h6, p, ul, li, ol {
+  margin: 0;
+  padding: 0; }
+
 html, body {
   margin: 0;
   padding: 0;
   color: #636f73;
   font-size: 20px;
   font-weight: 300;
-  font-family: Proxima Nova, "proxima-nova",sans-serif; }
+  font-family: "proxima-nova",sans-serif; }
+  @media screen and (max-width: 40em) {
+    html, body {
+      font-size: 16px; } }
 
 img {
   max-width: 100%;
@@ -31,49 +33,88 @@ pre {
   word-wrap: break-word; }
 
 body {
-  background: url(../img/river-topleft.png) left top no-repeat, url(../img/river-bottomright.png) right bottom no-repeat, url(../img/arrow.png) 5% calc(100% - 50px) no-repeat; }
+  background: url(../img/river-topleft.png) left top no-repeat, url(../img/river-bottomright.png) right bottom no-repeat, url(../img/arrow.png) 5% calc(100% - 50px) no-repeat;
+  padding: 20px; }
+  @media screen and (max-width: 40em) {
+    body {
+      background: url(../img/river-topleft.png) left -75px no-repeat, url(../img/river-bottomright.png) right bottom no-repeat, url(../img/arrow.png) 5% calc(100% - 50px) no-repeat; } }
 
 a {
-  color: #1b89ca; }
+  color: #1b89ca;
+  text-decoration: none; }
 
 .content {
-  max-width: 750px;
-  padding: 0 20px;
+  max-width: 800px;
   margin: 0 auto; }
-  .content #header .logo a {
-    text-indent: -9999px;
-    background: url(../img/logo.png);
-    display: block;
-    width: 305px;
-    height: 63px;
-    margin: 40px auto; }
-  .content #header nav ul li {
-    display: inline-block;
-    margin: 0 auto;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold; }
-  .content #header nav ul {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center; }
+  .content #header {
+    margin-bottom: 140px; }
+    .content #header .logo a {
+      text-indent: -9999px;
+      background: url(../img/logo.png);
+      display: block;
+      width: 305px;
+      height: 63px;
+      margin: 40px auto 20px; }
+    .content #header nav ul li {
+      display: inline-block;
+      margin: 0 auto;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px; }
+      @media screen and (max-width: 40em) {
+        .content #header nav ul li {
+          display: block; } }
+    .content #header nav ul {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center; }
+    @media screen and (max-width: 40em) {
+      .content #header {
+        margin-bottom: 60px; } }
   .content h2 {
     font-size: 80px;
     font-weight: 300;
-    line-height: 1; }
+    line-height: 1;
+    margin-bottom: 20px; }
+    @media screen and (max-width: 40em) {
+      .content h2 {
+        font-size: 45px; } }
   .content h3 {
     font-size: 40px;
-    font-weight: 300; }
+    font-weight: 300;
+    margin: 105px 0 15px; }
+    @media screen and (max-width: 40em) {
+      .content h3 {
+        margin: 60px 0 10px;
+        font-size: 30px; } }
   .content h4 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
-    color: #1b89ca; }
+    color: #1b89ca;
+    margin: 45px 0 0; }
+    @media screen and (max-width: 40em) {
+      .content h4 {
+        font-size: 16px;
+        margin: 20px 0 0 0; } }
+  .content p {
+    line-height: 1.5;
+    margin-bottom: 30px; }
   .content p.large {
     font-size: 26px; }
-  .content #footer ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
+    @media screen and (max-width: 40em) {
+      .content p.large {
+        font-size: 20px; } }
+  .content #footer {
+    padding: 180px 0; }
+    .content #footer ul {
+      list-style: none;
+      margin: 0 0 30px;
+      padding: 0;
+      line-height: 1.5; }
+    @media screen and (max-width: 40em) {
+      .content #footer {
+        padding: 60px 0 120px; } }
 
 /*# sourceMappingURL=style.css.map */
