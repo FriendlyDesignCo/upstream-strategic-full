@@ -10,6 +10,10 @@ html, *, *:before, *:after  {
 	box-sizing: border-box;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
 
 /* reset some common browser styles */
 h1, h2, h3, h4, h5, h6, p, ul, li, ol{
@@ -50,6 +54,7 @@ body{
 
 	@media screen and (max-width: 40em){
 	background: url(../img/river-topleft.svg) left -75px no-repeat, url(../img/river-bottomright.svg) right bottom no-repeat, url(../img/arrow.svg) 5% calc(100% - 50px) no-repeat;	
+	background-size: 269px 178px, 263px 168px, 230px 100px;
 	}
 }
 
@@ -149,9 +154,27 @@ a{
 			padding: 0;
 			line-height: 1.5;
 		}
-		padding: 180px 0;	
+		padding: 90px 0 180px;	
 		@media screen and (max-width: 40em){
 			padding: 60px 0 120px;
 		}	
+	}
+}
+
+.amanda-bio {
+	max-width: none;
+	width: 140%;
+	margin: 100px -20% -50px;
+	@media screen and (max-width: 40em){
+		margin-top: 40px;
+		margin-bottom: -20px;
+	}
+}
+.amanda-fishing{
+	float: left;
+	width: 45%;
+	margin: 0 5% 50px 0;
+	@media screen and (max-width: 40em){
+		margin-bottom: 5px;
 	}
 }
