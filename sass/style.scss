@@ -1,17 +1,25 @@
+$usc-grey: #636f73;
+$usc-blue: #1b89ca;
+
+
+
 /* apply a natural box layout model to all elements */
 html {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 *, *:before, *:after {
-  -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit;
+	-moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit;
 }
 
 
 /* reset some common browser styles */
 html, body {
-  margin: 0;
-  padding: 0;
-  }
+	margin: 0;
+	padding: 0;
+	color: $usc-grey;
+	font-size: 20px;
+	font-weight: 300;
+}
 
 img {
 	max-width: 100%;
@@ -27,3 +35,72 @@ pre {
 	word-wrap:   break-word;
 }
 
+body{
+	background: url(../img/river-topleft.png) left top no-repeat, url(../img/river-bottomright.png) right bottom no-repeat, url(../img/arrow.png) 5% calc(100% - 50px) no-repeat;
+}
+
+a{
+	color: $usc-blue;
+}
+
+.content{
+	max-width: 750px;
+	padding: 0 20px;
+	margin: 0 auto;
+	#header{	
+
+		.logo a{
+			text-indent: -9999px;
+			background: url(../img/logo.png);
+			display: block;
+			width: 305px;
+			height: 63px;
+			margin: 40px auto;
+		}
+		nav ul li{
+			display: inline-block;
+			margin: 0 auto;
+			text-transform: uppercase;
+			padding: 10px 20px;
+			font-size: 16px;
+			font-weight: bold;
+			a{
+				
+			}
+		}
+		nav ul{
+			max-width: 600px;
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+	
+	//CONTENT MIDDLE
+	h2{
+		font-size: 80px;
+		font-weight: 300;
+		line-height: 1;
+	}
+	h3{
+		font-size: 40px;
+		font-weight: 300;
+	}
+	h4{
+		font-size: 16px;
+		font-weight: bold;
+		color: $usc-blue;
+	}
+	p.large{
+		font-size: 26px;
+	}
+	//END CONTENT MIDDLE
+
+	#footer{
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+	}
+}
