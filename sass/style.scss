@@ -19,6 +19,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li, ol{
 	margin: 0;
 	padding: 0;
 }
+body{
+	min-height: 100vh;
+}
 html, body {
 	margin: 0;
 	padding: 0;
@@ -26,7 +29,7 @@ html, body {
 	font-size: 20px;
 	font-weight: 300;
 	font-family: "proxima-nova",sans-serif;
-	@media screen and (max-width: 40em){
+	@media screen and (max-width: $screen-sm){
 		font-size: 16px;
 	}
 }
@@ -48,14 +51,14 @@ pre {
 body{
 	transition: 0.25s all;
 	background: url(../img/river-topleft.svg) left top no-repeat, url(../img/river-bottomright.svg) right bottom no-repeat, url(../img/arrow.svg) 5% calc(100% - 50px) no-repeat;
-	background-size: 269px 178px, 263px 168px, 230px 100px;
+	background-size: 40%, 40%, 30%;
 	padding: 20px;
 	// left, right, arrow
 	@media screen and (min-width: 80em){
 	background: url(../img/river-topleft.svg) left top no-repeat, url(../img/river-bottomright.svg) right bottom no-repeat, url(../img/arrow.svg) 5% calc(100% - 100px) no-repeat;
 	background-size: 650px, 650px , 350px;
 	}
-	@media screen and (max-width: 40em){
+	@media screen and (max-width: $screen-sm){
 	background: url(../img/river-topleft.svg) left -75px no-repeat, url(../img/river-bottomright.svg) right bottom no-repeat, url(../img/arrow.svg) 5% calc(100% - 50px) no-repeat;	
 	background-size: 269px 178px, 263px 168px, 230px 100px;
 	}
@@ -78,23 +81,28 @@ a{
 			text-indent: -9999px;
 			background: url(../img/logo.svg);
 			display: block;
-			width: 305px;
-			height: 63px;
+			width: 410px;
+			height: 90px;
 			margin: 40px auto 20px;
-			background-size: 305px 63px;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			@media screen and (max-width: $screen-sm){
+				width: 310px;
+				height: 67px;
+			}
 		}
 		nav ul li{
 			display: inline-block;
 			margin: 0 auto;
 			text-transform: uppercase;
-			padding: 10px 20px;
-			font-size: 16px;
+			padding: 10px 11px;
+			font-size: 15px;
 			font-weight: bold;
 			letter-spacing: 1px;
 			a{
 				text-decoration: none;
 			}
-			@media screen and (max-width: 40em){
+			@media screen and (max-width: $screen-sm){
 			display: block;
 			}
 		}
@@ -103,8 +111,8 @@ a{
 			margin: 0 auto;
 			text-align: center;
 		}
-		margin-bottom: 140px;
-		@media screen and (max-width: 40em){
+		margin-bottom: 110px;
+		@media screen and (max-width: $screen-sm){
 			margin-bottom: 60px;
 		}
 	}
@@ -115,7 +123,7 @@ a{
 		font-weight: 300;
 		line-height: 1;
 		margin-bottom: 20px;
-		@media screen and (max-width: 40em){
+		@media screen and (max-width: $screen-sm){
 		font-size: 45px;
 		}
 	}
@@ -123,7 +131,7 @@ a{
 		font-size: 40px;
 		font-weight: 300;
 		margin: 105px 0 15px;
-		@media screen and (max-width: 40em){
+		@media screen and (max-width: $screen-sm){
 			margin: 60px 0 10px;
 			font-size: 30px;
 		}
@@ -133,10 +141,15 @@ a{
 		font-weight: bold;
 		color: $usc-blue;
 		margin: 45px 0 0;
-		@media screen and (max-width: 40em){
+		@media screen and (max-width: $screen-sm){
 			font-size: 16px;
 			margin: 20px 0 0 0;
 		}
+	}
+	h5{
+		font-size: 26px;
+		margin-bottom: 15px;
+		font-weight: normal;
 	}
 	p{
 		line-height: 1.5;
@@ -144,7 +157,7 @@ a{
 	}
 	p.large{
 		font-size: 26px;
-		@media screen and (max-width: 40em){
+		@media screen and (max-width: $screen-sm){
 			font-size: 20px;
 		}
 	}
@@ -158,6 +171,7 @@ a{
 	//END CONTENT MIDDLE
 
 	#footer{
+
 		ul{
 			list-style: none;
 			margin: 0 0 30px;
@@ -167,21 +181,20 @@ a{
 		li{
 			margin-left: 0;
 		}
-		padding: 90px 0 180px;	
+		padding: 60px 0 180px;	
 		@media screen and (min-width: 80em){
 		padding-bottom: 240px;
 		}
-		@media screen and (max-width: 40em){
-			padding: 60px 0 120px;
+		@media screen and (max-width: $screen-sm){
+			padding: 30px 0 120px;
 		}	
 	}
 }
 
 .amanda-bio {
 	max-width: none;
-	width: 140%;
-	margin: 100px -20% -50px;
-	@media screen and (max-width: 40em){
+	margin: 100px 0 -50px;
+	@media screen and (max-width: $screen-sm){
 		margin-top: 40px;
 		margin-bottom: -20px;
 	}
@@ -190,7 +203,7 @@ a{
 	float: left;
 	width: 45%;
 	margin: 0 5% 50px 0;
-	@media screen and (max-width: 40em){
+	@media screen and (max-width: $screen-sm){
 		margin-bottom: 5px;
 	}
 }
